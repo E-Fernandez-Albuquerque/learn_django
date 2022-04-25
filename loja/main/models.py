@@ -28,4 +28,4 @@ class Product(models.Model):
         self.price = self.price * ((100-discount)/100)
 
     def get_absolute_url(self):
-        return reverse('produto:product_view', kwargs={'slug': self.slug})
+        return reverse('main:product_view', kwargs={'slug': self.slug})

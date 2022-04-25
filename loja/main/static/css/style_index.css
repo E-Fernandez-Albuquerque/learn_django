@@ -27,10 +27,6 @@ header div{
     cursor: pointer !important;
 }
 
-header div:hover{
-    background-color: #8a66ff !important;
-}
-
 header div a{
     line-height: 60px !important;
     padding: 0 25px !important;
@@ -38,6 +34,12 @@ header div a{
     font-weight: 700 !important;
     text-decoration: none !important;
     color: #210233 !important;
+    transition: all ease-in 0.4s;
+}
+
+header div a:hover{
+    background-color: #210233 !important;
+    color: #fff !important;
 }
 
 .all-container{
@@ -63,6 +65,7 @@ header div a{
     font-family: 'Amatic SC';
     font-size: 30px;
     padding: 5px 0;
+    margin: 0;
 }
 
 .product-card span{
@@ -75,7 +78,10 @@ header div a{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
 
+.title-price span{
+    color: #222;
 }
 
 .description{
@@ -96,4 +102,22 @@ header div a{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 30px;
+    background-color: #210233;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+}
+
+.button:hover{
+    background-color: #3a035a;
+}
+
+.button a{
+    text-decoration: none;
+    font-family: Raleway;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
 }
