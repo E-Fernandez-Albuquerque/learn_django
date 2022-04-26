@@ -23,9 +23,11 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2 ,null=False)
     slug = models.SlugField(max_length=255, unique=True, null=True)
+    image = models.ImageField(default='null', upload_to = './main/static/imgs')
 
-    def discount(self, discount):
-        self.price = self.price * ((100-discount)/100)
+    def url_correction(self):
+        url = str(self.image)
+        return url[4:]
 
     def get_absolute_url(self):
         return reverse('main:product_view', kwargs={'slug': self.slug})

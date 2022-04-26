@@ -2,6 +2,23 @@
 
 {% block content %}
 
-<h2>{{ product.title }}</h2>
+<div class="detail-container">
+    <div class="title">
+        <h3>{{ product.title }}</h3>
+        <span>R${{ product.price }}</span>
+    </div>
+    <div class="image-description">
+        <div class="image">
+            <img src="..{{ product.url_correction }}">
+        </div>
+        <div class="description-detail">
+            <p>{{ product.description }}</p>
+            <p>{{ product.url_correction }}</p>
+        </div>
+    </div>
+    <div class="button-detail">
+        <a class="buy">Comprar</a>
+    </div>
+</div>
 
 {% endblock %}
