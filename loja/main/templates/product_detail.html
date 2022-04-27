@@ -10,6 +10,7 @@
     <div class="image-description">
         <div class="image">
             <img src="..{{ product.url_correction }}">
+            <a href="..{{ product.file_url_correction }}" download>File</a>
         </div>
         <div class="description-detail">
             <p>{{ product.description }}</p>
@@ -18,6 +19,11 @@
     <div class="button-detail">
         <a class="buy wish">Adicionar aos favoritos</a>
         <a class="buy">Comprar</a>
+    </div>
+    <div>
+        <video width="320" height="240" controls>
+            <source src="..{{ product.video_url_correction }}" type="video/mp4">
+        </video>
     </div>
 </div>
 

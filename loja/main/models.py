@@ -24,9 +24,19 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2 ,null=False)
     slug = models.SlugField(max_length=255, unique=True, null=True)
     image = models.ImageField(default='null', upload_to = './main/static/imgs')
+    file = models.FileField(default='null', upload_to='./main/static/files')
+    video = models.FileField(default='null', upload_to='./main/static/videos')
 
     def url_correction(self):
         url = str(self.image)
+        return url[4:]
+
+    def file_url_correction(self):
+        url = str(self.file)
+        return url[4:]
+
+    def video_url_correction(self):
+        url = str(self.video)
         return url[4:]
 
     def get_absolute_url(self):
