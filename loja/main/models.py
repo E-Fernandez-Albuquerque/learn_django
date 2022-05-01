@@ -3,6 +3,8 @@ from django.db import models
 from django.forms import SlugField
 from django.urls import reverse
 
+
+
 class Person(models.Model):
     name = models.CharField(max_length=255)
     age = models.IntegerField()

@@ -1,12 +1,18 @@
 from pyexpat import model
+from django.contrib.auth import authenticate
 from re import template
 from django.views.generic import TemplateView, ListView, DetailView
 from .models import Person, Contact, Product
+from django.contrib.auth.models import User
 
 
 class HomePageView(TemplateView):
     template_name = 'index.html'
     model = Person
+
+class LoginView(TemplateView):
+    template_name = 'login.html'
+    model = User
 
 
 class AboutPageView(ListView):
