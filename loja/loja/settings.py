@@ -38,16 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-    'django_pagarme',
-    'phonenumber_field',
-    'corsheaders',
-    'rest_framework'
+    'users',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleWare',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

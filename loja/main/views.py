@@ -4,6 +4,7 @@ from re import template
 from django.views.generic import TemplateView, ListView, DetailView
 from .models import Person, Contact, Product
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 
 class HomePageView(TemplateView):

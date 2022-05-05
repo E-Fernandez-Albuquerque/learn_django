@@ -14,10 +14,14 @@
 
 <body>
     <header>
+        {% if user.is_authenticated %}
         <div><a href="/">Início</a></div>
         <div><a href="/products">Loja</a></div>
         <div><a href="/about">Quem somos</a></div>
         <div><a href="/contact">Contato</a></div>
+        {% else %}
+        <div><a href="/auth/login">Login</a></div>
+        {% endif %}
     </header>
 
     <section>
