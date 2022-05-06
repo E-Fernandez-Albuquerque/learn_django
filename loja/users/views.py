@@ -35,7 +35,7 @@ def login_site(request):
 
         if user:
             login(request, user)
-            return HttpResponse('autenticado')
+            return redirect('/')
         else:
             return HttpResponse('email ou senha invalidos')
 

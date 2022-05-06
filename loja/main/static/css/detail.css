@@ -105,3 +105,7 @@
 .wish:hover{
     background-color: #f7e9ff !important;
 }
+
+#download{
+    font-size: 24px;
+}
