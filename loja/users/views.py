@@ -3,7 +3,8 @@ from multiprocessing.reduction import send_handle
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import redirect
 
 def cadastro(request):
     if request.method == 'GET':
@@ -37,4 +38,9 @@ def login_site(request):
             return HttpResponse('autenticado')
         else:
             return HttpResponse('email ou senha invalidos')
+
+
+def logout_site(request):
+    logout(request)
+    return redirect('/')
     

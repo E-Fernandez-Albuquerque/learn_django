@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'users',
+    'pagseguro'
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -136,3 +137,8 @@ CHAVE_PAGARME_CRIPTOGRAFIA_PUBLICA = 'CHAVE_PAGARME_CRIPTOGRAFIA_PUBLICA'
 
 # Para validar telefones no Brasil
 PHONENUMBER_DEFAULT_REGION = 'BR'
+
+PAGSEGURO_EMAIL = 'efernandezalbuq@gmail.com'
+PAGSEGURO_TOKEN = 'token'
+PAGSEGURO_SANDBOX = True
+PAGSEGUR_LOG_IN_MODEL = True
